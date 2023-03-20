@@ -58,6 +58,9 @@
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                  @*  <button asp-controller="Employees" asp-action="Edit" asp-route-id="@item.id" type="button" class="btn btn-secondary">Edit</button>
+                    <button asp-controller="Employees" asp-action="Details" asp-route-id="@item.id" method= type="button" class="btn btn-warning">Details</button>
+                    <button asp-controller="Employees" asp-action="Delete" asp-route-id="@item.id" method= type="button" class="btn btn-danger">Delete</button>*@
             </td>
         </tr>
 }
