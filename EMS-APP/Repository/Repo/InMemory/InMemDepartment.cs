@@ -1,5 +1,7 @@
 ﻿using EMS_APP.Models;
+using EMS_APP.Repository;
 using EMS_APP.Repository.Interfaces;
+using static NuGet.Packaging.PackagingConstants;
 
 namespace EMS_APP.Repository.Repo.InMemory
 {
@@ -14,7 +16,11 @@ namespace EMS_APP.Repository.Repo.InMemory
             departmentList.Add(new departmentModel(2, "Finance"));
             departmentList.Add(new departmentModel(3, "IT"));
             departmentList.Add(new departmentModel(4, "Human Resource"));
+
+            
+
         }
+
 
 
         //METHODS

@@ -20,13 +20,13 @@ namespace EMS_APP.Repository.Repo.MSSQL
         //READ-ALL
         public List<employeeModel> GetAllEmployees()
         {
-            return _dbContext.EMPLOYEES.AsNoTracking().ToList();
+            return _dbContext.EMPLOYEES.Include(e => e.department).AsNoTracking().ToList();
         }
 
         //READ-ONLY ONE
         public employeeModel GetEmployeeById(int Id)
         {
-            return _dbContext.EMPLOYEES.AsNoTracking().ToList().FirstOrDefault(m => m.id == Id);
+            return _dbContext.EMPLOYEES.Include(e =>e.department).AsNoTracking().ToList().FirstOrDefault(m => m.id == Id);
         }
 
 

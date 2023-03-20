@@ -9,11 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<EMS_DBContext>();
 
-builder.Services.AddSingleton<IEmployeeRepo, InMemEmployee>();
-builder.Services.AddSingleton<IDepartmentRepo, InMemDepartment>();
+//builder.Services.AddSingleton<IEmployeeRepo, InMemEmployee>();
+//builder.Services.AddSingleton<IDepartmentRepo, InMemDepartment>();
 
-//builder.Services.AddScoped<IEmployeeRepo, DBEmployee>();
-//builder.Services.AddScoped<IDepartmentRepo, DBDepartment>();
+builder.Services.AddScoped<IEmployeeRepo, DBEmployee>();
+builder.Services.AddScoped<IDepartmentRepo, DBDepartment>();
 
 var app = builder.Build();
 

@@ -16,11 +16,13 @@ namespace EMS_APP.Controllers
         //private readonly EMS_DBContext _repo;
         IEmployeeRepo _repo;
         IDepartmentRepo _repo2;
+        
 
         public EmployeesController(IEmployeeRepo repo, IDepartmentRepo repo2)
         {
             _repo = repo;
             _repo2 = repo2;
+            
         }
 
         // GET: Employees
@@ -44,7 +46,7 @@ namespace EMS_APP.Controllers
             {
                 return NotFound();
             }
-
+            //ViewBag.DepartmentName = employee.department.deptName;
             return View(employee);
         }
 

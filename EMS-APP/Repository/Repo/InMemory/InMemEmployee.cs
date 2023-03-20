@@ -15,6 +15,12 @@ namespace EMS_APP.Repository.Repo.InMemory
             employeeList.Add(new employeeModel(3, "anna", DateTime.Now.AddYears(-25), "user2@ems.com", "09987653412", false, 2));
             employeeList.Add(new employeeModel(4, "matthew", DateTime.Now.AddYears(-23), "user3@ems.com", "09986753421", false, 3));
             employeeList.Add(new employeeModel(5, "celine", DateTime.Now.AddYears(-20), "user4@ems.com", "09978653421", false, 4));
+
+
+            //var query = from employeeModel in employeeList
+            //            join departmentModel in departmentList
+            //            on employeeList equals customer.Id
+            //            select new { Order = order, Customer = customer };
         }
 
 
